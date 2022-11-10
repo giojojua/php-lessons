@@ -17,7 +17,7 @@
 
 
 // Set Time Zone
-date_default_timezone_set('Tbilisi');
+//date_default_timezone_set('Tbilisi');
 
 //echo date('h:i:sa')
 
