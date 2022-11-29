@@ -1,5 +1,12 @@
 <?php
+    if (isset($_POST['submit'])) {
+        $username = htmlentities($_POST['username']);
 
+        setcookie('username', $username, time()+3600);
+        // 1 Hour
+
+        header('Location: page2.php');
+    }
 ?>
 
 <!doctype html>
@@ -12,6 +19,12 @@
     <title>Cookies</title>
 </head>
 <body>
-
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+    <label for="">
+        <input type="text" name="username" placeholder="Enter Username">
+    </label>
+    <br>
+    <input type="submit" name="submit" value=" Submit">
+</form>
 </body>
 </html>
