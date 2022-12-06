@@ -19,7 +19,7 @@ $post = mysqli_fetch_assoc($result);
 mysqli_close($conn);
 ?>
 
-<?php include('inc/header.php') ?>
+<?php include('inc/header.php'); ?>
 
 <a href="<?php echo ROOT_URL; ?>">Go Back</a>
 <h1><?php echo $post['title']; ?></h1>
@@ -27,4 +27,4 @@ mysqli_close($conn);
     <?php echo $post['author']; ?> </small>
 <p><?php echo $post['content'] ?></p>
 
-<?php include('inc/footer.php') ?>
+<?php include('inc/footer.php'); ?>

@@ -1,5 +1,6 @@
 <?php
-require('config/config.php');require('config/db.php');
+require('config/config.php');
+require('config/db.php');
 
 // Create Query
 $query = 'SELECT * FROM posts';
@@ -15,7 +16,7 @@ $posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 mysqli_close($conn);
 ?>
 
-<?php include('inc/header.php') ?>
+<?php include('inc/header.php'); ?>
 <h1>Posts</h1>
 <?php foreach ($posts as $post) : ?>
     <div class="well">
@@ -27,4 +28,4 @@ mysqli_close($conn);
     </div>
 <?php endforeach; ?>
 
-<?php include('inc/footer.php') ?>
+<?php include('inc/footer.php'); ?>
